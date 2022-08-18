@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+body{
+    height: 100vh;
+    overflow: hidden;
+    background: #fff;
+}
+h1{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    width: 100%;
+    font-size: 5vw;
+    line-height: 1em;
+    font-weight: 900;
+    color: #333;
+    text-transform: uppercase;
+}
+i{
+    position: absolute;
+    display: block;
+    background: #000;
+    border-radius: 50%;
+
+    animation: animate 5s linear infinite;
+}
+
+@keyframes animate{
+    0%{
+        transform: translateY(calc(100vh + 350px))
+    }
+    100%{
+        transform: translateY(calc(-300px))
+
+    }
+}
+
+i:nth-child(7n+1){
+    background: #E9C46A;
+}
+i:nth-child(7n+2){
+    background: #E76F51;
+}
+i:nth-child(7n+3){
+    background: #fff;
+    border: 5px solid #E76F51;
+}
+i:nth-child(7n+4){
+    background: #2A9D8F;
+}
+i:nth-child(7n+5){
+    background: #fff;
+    border: 5px solid #2A9D8F;
+}
+i:nth-child(7n+6){
+    background: #264653;
+}
+i:nth-child(7n+7){
+    background: #fff;
+    border: 5px solid #264653;
+}

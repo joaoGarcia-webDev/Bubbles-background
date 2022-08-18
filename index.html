@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubbles Background</title>
+
+    <link rel="stylesheet" href="custom.css">
+</head>
+<body onresize="reset()">
+    <h1>Bubbles Background </br>with</br> JS and CSS</h1>
+
+    <script>
+        function circle() {
+            let quant = 75;
+            let body = document.querySelector('body');
+            let i = 0;
+            while (i < quant )
+            {
+                let element = document.createElement('i');
+                let posX = Math.floor(Math.random()*window.innerWidth);
+                let delay = Math.random() * -20;
+                let duration = Math.random() * 10;
+
+                let size = Math.random() * 250;
+                element.style.width = 10 + size + 'px';
+                element.style.height = 10 + size + 'px';
+                element.style.left = posX + 'px';
+                element.style.animationDelay = delay + 's';
+                element.style.animationDuration = 5 + duration + 's';
+                element.style.webkitBoxShadow = '0 30px 50px #0002'
+
+                body.appendChild(element);
+                i++;
+            }
+        }
+
+        function reset() {
+            let allEl = document.querySelectorAll('i');
+            allEl.forEach(iEl => {
+                iEl.remove
+            });
+        }
+
+        circle();
+    </script>
+</body>
+</html>
