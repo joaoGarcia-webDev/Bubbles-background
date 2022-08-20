@@ -10,20 +10,23 @@
 </head>
 <body onresize="reset()">
     <h1>Bubbles Background </br>with</br> JS and CSS</h1>
+    <div class="bubble-box">
 
+    </div>
     <script>
         function circle() {
             let quant = 75;
-            let body = document.querySelector('body');
+            let bubbleBox = document.querySelector('.bubble-box');
             let i = 0;
             while (i < quant )
             {
                 let element = document.createElement('i');
-                let posX = Math.floor(Math.random()*window.innerWidth);
-                let delay = Math.random() * -20;
+                let posX = Math.floor(Math.random()*window.innerWidth - 150);
+                let delay = Math.random() * -30;
                 let duration = Math.random() * 10;
-
-                let size = Math.random() * 250;
+                console.log('position screen ' + window.innerWidth)
+                console.log(posX);
+                let size = Math.random() * 200;
                 element.style.width = 10 + size + 'px';
                 element.style.height = 10 + size + 'px';
                 element.style.left = posX + 'px';
@@ -31,7 +34,7 @@
                 element.style.animationDuration = 5 + duration + 's';
                 element.style.webkitBoxShadow = '0 30px 50px #0002'
 
-                body.appendChild(element);
+                bubbleBox.appendChild(element);
                 i++;
             }
         }
